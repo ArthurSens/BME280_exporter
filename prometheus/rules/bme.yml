@@ -1,0 +1,13 @@
+groups:
+- name: bme280 # yamllint disable-line
+  rules:
+
+  - alert: TEMPERATURE
+    expr: bm280_temperature > 28
+    annotations:
+      description: "Room {{ $labels.comodo }} is hot!"
+
+  - alert: TEMPERATURE
+    expr: bm280_temperature < 16
+    annotations:
+      description: "Room {{ $labels.comodo }} is too cold!"

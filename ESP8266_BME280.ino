@@ -7,8 +7,8 @@
 #include <ESP8266mDNS.h>
 
 #ifndef STASSID
-#define STASSID "SSID"
-#define STAPSK  "PASSWORD"
+#define STASSID "SSID"       // Change with your WiFi SSID
+#define STAPSK  "PASSWORD"   // Change with your WiFi password
 #endif
 
 const char* ssid = STASSID;

@@ -1,0 +1,16 @@
+global:
+receivers:
+  - name: default-receiver
+  - name: IoT_Manager
+    webhook_configs:
+      - url: "http://my.web.hook/alert"
+route:
+  group_wait: 10s
+  group_interval: 5m
+  repeat_interval: 3h
+  receiver: default-receiver
+  
+  routes: 
+    - receiver: IoT_Manager
+      match:
+        job: 'House Monitoring'
